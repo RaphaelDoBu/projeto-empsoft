@@ -1,0 +1,155 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Workout</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/grayscale.css" rel="stylesheet">
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+</head>
+
+
+<!------ Include the above in your HEAD tag ---------->
+<body style="background-color: #1b1e21">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-size: 16px">Workout</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{% url 'index' %}" style="font-size: 17px">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a id="inscrevase_link" class="dropdown-toggle"
+                       data-toggle="dropdown">Inscreva-se<b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a id="register_user_link" href="{% url "cadastro_estudante" %}">Estudante</a></a>
+                        </li>
+                        <li><a id="register_instituicao_link"
+                               href="{% url "cadastro_empresa" %}">Empresa</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="row">
+        <!-- panel preview -->
+        <div class="col-sm-12">
+            <div class="col-sm-10" style="margin-left: 8%; margin-top: 10%">
+                <div class="col-sm-12">
+                    <legend style="text-align: center; font-size: 25px">Cadastro de Empresa</legend>
+                </div>
+                <div class="panel" >
+                    <div class="panel-body form-horizontal payment-form">
+                        <div class="form-group">
+                            <label for="concept" class="col-sm-3 control-label">Nome da Empresa</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">CNPJ</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Endereço</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">CEP</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Cidade</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Telefone</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="col-sm-3 control-label">Nome de usuário</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-sm-3 control-label">Senha</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / panel preview -->
+        </div>
+    </div>
+</div>
+<!-- Download Section -->
+</body>
+
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2018</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- Custom scripts for this template -->
+<script src="../static/js/grayscale.min.js"></script>
+

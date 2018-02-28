@@ -2,7 +2,7 @@
     <h1>Estudantes disponiveis</h1>
 <ul>
     {%  for estudantes in all_estudantes %}
-    <li><a href="estudantes/{{ estudantes.id }}"> {{ estudantes.nome }}</a></li>
+    <li><a href="{% url 'detail' estudantes.id%}"> {{ estudantes.nome }}</a></li>
 
     {%  endfor %}
 </ul>
