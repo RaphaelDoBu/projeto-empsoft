@@ -1,8 +1,11 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<head>
+<!DOCTYPE html>
+<html lang="en">
 
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
           type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../static/css/grayscale.css" rel="stylesheet">
 
@@ -30,11 +33,11 @@
 
 
 <!------ Include the above in your HEAD tag ---------->
-<body style="background-color: #1b1e21">
+<body id="page-top" style="background-color: #1b1e21">
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-size: 16px">Workout</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-top:-30px; margin-right: 10px; font-size: 28px">Workout</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -46,21 +49,21 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{% url 'index' %}" style="font-size: 17px">Home</a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" style="margin-left:7px ;margin-top: 15px">
                     <a id="inscrevase_link" class="dropdown-toggle"
-                       data-toggle="dropdown">Inscreva-se<b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a id="register_user_link" href="{% url "cadastro_estudante" %}">Estudante</a></a>
+                       data-toggle="dropdown" style="font-size: 17px">Inscreva-se</a>
+                    <ul class="dropdown-menu" style="background-color: black;">
+                        <li style="margin-left:10px">
+                            <a id="register_user_link " href="{% url "cadastro_estudante" %}" style="font-size: 15px">Estudante</a></a>
                         </li>
-                        <li><a id="register_instituicao_link"
-                               href="{% url "cadastro_empresa" %}">Empresa</a>
+                        <li style="margin-left:10px">
+                            <a id="register_instituicao_link "
+                               href="{% url "cadastro_empresa" %}" style="font-size: 15px">Empresa</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                <li class="nav-item" style="margin-left:7px ">
+                    <a class="nav-link js-scroll-trigger" href="#contact"  style="font-size: 17px">Contact</a>
                 </li>
             </ul>
         </div>
@@ -72,10 +75,10 @@
         <!-- panel preview -->
         <div class="col-sm-12">
             <div class="col-sm-10" style="margin-left: 8%; margin-top: 10%">
-                <div class="col-sm-12">
+                <div class="col-sm-12" style="margin-top: 3%">
                     <legend style="text-align: center; font-size: 25px">Cadastro de Empresa</legend>
                 </div>
-                <div class="panel" >
+                <div class="panel">
                     <div class="panel-body form-horizontal payment-form">
                         <div class="form-group">
                             <label for="concept" class="col-sm-3 control-label">Nome da Empresa</label>
@@ -125,14 +128,17 @@
                                 <input type="password" class="form-control">
                             </div>
                         </div>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">Concluir</button>
+
                     </div>
+
                 </div>
             </div> <!-- / panel preview -->
         </div>
     </div>
 </div>
 <!-- Download Section -->
-</body>
+
 
 <footer>
     <div class="container text-center">
@@ -151,5 +157,9 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
 <!-- Custom scripts for this template -->
-<script src="../static/js/grayscale.min.js"></script>
+<script src="../static/js/grayscale.js"></script>
 
+
+</body>
+
+</html>

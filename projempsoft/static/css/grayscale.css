@@ -54,12 +54,12 @@ a:focus, a:hover {
 #mainNav {
   font-family: 'Mukta Vaani', sans-serif;
   margin-bottom: 0;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   background-color: black;
 }
 
-label,legend,estu,emp{
+label,legend{
   font-family: 'Mukta Vaani', sans-serif;
   font-size: 16px;
   color: #1b1e21;
@@ -74,6 +74,7 @@ label,legend,estu,emp{
 
 #mainNav .navbar-brand {
   font-weight: 700;
+  font-size: 25px;
 }
 
 #mainNav a {
@@ -221,7 +222,7 @@ label,legend,estu,emp{
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border-radius: 0;
 }
 
@@ -286,4 +287,8 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.navbar-nav a{
+  font-family: "Arial Black", arial-black;
 }
