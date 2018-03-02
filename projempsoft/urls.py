@@ -13,5 +13,7 @@ urlpatterns = [
     url(r'^cadastro-estudante/', views.cadastro_estudante, name='cadastro_estudante'),
     url(r'^cadastro-empresa/', views.cadastro_empresa, name='cadastro_empresa'),
 
-    url(r'^estudantes/(?P<estudante_id>[0-9]+)$', views.detail, name='detail')
+    url(r'^estudantes/(?P<estudante_id>[0-9]+)$', views.detail, name='detail'),
+
+    url(r'^login/', views.login, name='login')
 ]

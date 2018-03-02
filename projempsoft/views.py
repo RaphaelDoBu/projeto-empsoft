@@ -23,3 +23,6 @@ def cadastro_empresa(request):
 def detail(request, estudante_id):
     estudante = get_object_or_404(Estudante, pk=estudante_id)
     return render(request, "estudante_detalhe.html", {'estudante': estudante})
+
+def login(request):
+    return render(request, "login.html")

@@ -37,7 +37,8 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-top:-30px; margin-right: 10px; font-size: 28px">Workout</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"
+           style="margin-top:-30px; margin-right: 10px; font-size: 27px">Workout</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,21 +50,24 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{% url 'index' %}" style="font-size: 17px">Home</a>
                 </li>
-                <li class="dropdown" style="margin-left:7px ;margin-top: 15px">
+                <li class="dropdown" style="margin-left:15px ;margin-top: 15px">
                     <a id="inscrevase_link" class="dropdown-toggle"
                        data-toggle="dropdown" style="font-size: 17px">Inscreva-se</a>
                     <ul class="dropdown-menu" style="background-color: black;">
                         <li style="margin-left:10px">
                             <a id="register_user_link " href="{% url "cadastro_estudante" %}" style="font-size: 15px">Estudante</a></a>
                         </li>
-                        <li style="margin-left:10px">
+                        <li style="margin-left:15px">
                             <a id="register_instituicao_link "
                                href="{% url "cadastro_empresa" %}" style="font-size: 15px">Empresa</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item" style="margin-left:7px ">
-                    <a class="nav-link js-scroll-trigger" href="#contact"  style="font-size: 17px">Contact</a>
+                <li class="nav-item" style="margin-left:15px ">
+                    <a class="nav-link js-scroll-trigger" href="#contact" style="font-size: 17px">Contact</a>
+                </li>
+                <li class="nav-item" style=" margin-left: 15px;">
+                    <a class="nav-link js-scroll-trigger" href="{% url "login" %} "  style="font-size: 17px">Login</a>
                 </li>
             </ul>
         </div>
@@ -128,7 +132,9 @@
                                 <input type="password" class="form-control">
                             </div>
                         </div>
-                    <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">Concluir</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">
+                            Concluir
+                        </button>
 
                     </div>
 

@@ -11,7 +11,7 @@
     <title>Workout</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-top:-30px; margin-right: 10px;font-size: 25px">Workout</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-top:-30px; margin-right: 10px;font-size: 27px">Workout</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger"  style="font-size: 17px" href="{% url 'index' %}">Home</a>
                 </li>
-                <li class="dropdown"  style="margin-left:7px ;margin-top: 15px">
+                <li class="dropdown"  style="margin-left:15px ;margin-top: 15px">
                     <a id="inscrevase_link" class="dropdown-toggle"
                        data-toggle="dropdown"  style="font-size: 17px">Inscreva-se</a>
                     <ul class="dropdown-menu" style="background-color: black;">
@@ -59,8 +59,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item" style="margin-left:7px ">
+                <li class="nav-item" style="margin-left:15px ">
                     <a class="nav-link js-scroll-trigger"  style="font-size: 17px" href="#contact">Contact</a>
+                </li>
+                    <li class="nav-item" style=" margin-left: 15px;">
+                    <a class="nav-link js-scroll-trigger" href="{% url "login" %}"  style="font-size: 17px">Login</a>
                 </li>
             </ul>
         </div>
