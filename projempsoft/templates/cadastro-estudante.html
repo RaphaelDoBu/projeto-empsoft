@@ -30,11 +30,12 @@
 
 
 <!------ Include the above in your HEAD tag ---------->
-<body style="background-color: #1b1e21">
+<body style="background-color:  #5a6268">
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav" style="background-color: black">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-top:-30px; margin-right: 10px;font-size: 27px">Workout</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"
+           style="margin-top:-30px; margin-right: 10px;font-size: 27px">Workout</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -44,11 +45,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger"  style="font-size: 17px" href="{% url 'index' %}">Home</a>
+                    <a class="nav-link js-scroll-trigger" style="font-size: 17px" href="{% url 'index' %}">Home</a>
                 </li>
-                <li class="dropdown"  style="margin-left:15px ;margin-top: 15px">
+                <li class="dropdown" style="margin-left:15px ;margin-top: 15px">
                     <a id="inscrevase_link" class="dropdown-toggle"
-                       data-toggle="dropdown"  style="font-size: 17px">Inscreva-se</a>
+                       data-toggle="dropdown" style="font-size: 17px">Inscreva-se</a>
                     <ul class="dropdown-menu" style="background-color: black;">
                         <li style="margin-left:10px">
                             <a id="register_user_link " href="{% url "cadastro_estudante" %}" style="font-size: 15px">Estudante</a></a>
@@ -60,10 +61,10 @@
                     </ul>
                 </li>
                 <li class="nav-item" style="margin-left:15px ">
-                    <a class="nav-link js-scroll-trigger"  style="font-size: 17px" href="#contact">Contact</a>
+                    <a class="nav-link js-scroll-trigger" style="font-size: 15px" href="#contact">Contact</a>
                 </li>
-                    <li class="nav-item" style=" margin-left: 15px;">
-                    <a class="nav-link js-scroll-trigger" href="{% url "login" %}"  style="font-size: 17px">Login</a>
+                <li class="nav-item" style=" margin-left: 15px;">
+                    <a class="nav-link js-scroll-trigger" href="{% url "login" %}" style="font-size: 15px">Login</a>
                 </li>
             </ul>
         </div>
@@ -72,85 +73,90 @@
 <div class="container">
     <div class="row">
         <!-- panel preview -->
-        <div class="col-sm-10" style="margin-left: 8%; margin-top: 10%;">
+        <div class="col-sm-10" style="margin-left: 8%; margin-top: 4%;">
             <div class="col-sm-12" style="margin-top: 3%">
                 <legend style="text-align: center;font-size: 25px">Cadastro de Estudante</legend>
             </div>
             <div class="panel">
-                <div class="panel-body form-horizontal payment-form">
-                    <div class="form-group">
-                        <label for="concept" class="col-sm-3 control-label">Nome da Estudante</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="concept" name="concept">
+                <form method="POST" class="post-form" action="/login/">
+                    {% csrf_token %}
+                    <div class="panel-body form-horizontal payment-form">
+                        <div class="form-group">
+                            <label for="concept" class="col-sm-3 control-label">Nome da Estudante</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="concept" name="concept">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="col-sm-3 control-label">Data de Nascimento</label>
-                        <div class="col-sm-9">
-                            <input type="date" class="form-control" id="date" name="date">
+                        <div class="form-group">
+                            <label for="date" class="col-sm-3 control-label">Data de Nascimento</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="date" name="date">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">CPF</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="description" name="description">
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">CPF</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">CEP</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="description" name="description">
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">CEP</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="amount" class="col-sm-3 control-label">Endereço</label>
-                        <div class="col-sm-9">
-                            <input type="number" class="form-control" id="amount" name="amount">
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Endereço</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="amount" name="amount">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="amount" class="col-sm-3 control-label">Telefone</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control">
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Telefone</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">Curso</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="description" name="description">
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">Curso</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">Conclusão</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="description" name="description">
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">Conclusão</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">Descrição do currículo</label>
-                        <div class="col-sm-9">
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">Descrição do currículo</label>
+                            <div class="col-sm-9">
                             <textarea type="text" rows="3" class="form-control" id="description"
                                       name="description"></textarea>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="form-group">
-                        <label for="status" class="col-sm-3 control-label">Nome de usuário</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control">
+                        <div class="form-group">
+                            <label for="status" class="col-sm-3 control-label">Nome de usuário</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="col-sm-3 control-label">Senha</label>
-                        <div class="col-sm-9">
-                            <input type="password" class="form-control">
+                        <div class="form-group">
+                            <label for="date" class="col-sm-3 control-label">Senha</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control">
+                            </div>
                         </div>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">Concluir</button>
-                </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">
+                            Concluir
+                        </button>
+                    </div>
+                </form>
             </div>
 
         </div> <!-- / panel preview -->

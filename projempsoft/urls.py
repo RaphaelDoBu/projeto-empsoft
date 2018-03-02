@@ -15,5 +15,7 @@ urlpatterns = [
 
     url(r'^estudantes/(?P<estudante_id>[0-9]+)$', views.detail, name='detail'),
 
-    url(r'^login/', views.login, name='login')
+    url(r'^login/', views.login, name='login'),
+
+    url(r'^post/new/$', views.post_new, name='post_new'),
 ]
