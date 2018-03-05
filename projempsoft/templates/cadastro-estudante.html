@@ -74,93 +74,94 @@
     <div class="row">
         <!-- panel preview -->
         <div class="col-sm-10" style="margin-left: 8%; margin-top: 4%;">
-            <div class="col-sm-12" style="margin-top: 3%">
-                <legend style="text-align: center;font-size: 25px">Cadastro de Estudante</legend>
-            </div>
             <div class="panel">
-                <form method="POST" class="post-form" action="/login/">
+                <form method="POST" class="post-form" action="/post/new-estudante/">
                     {% csrf_token %}
-                    <div class="panel-body form-horizontal payment-form">
-                        <div class="form-group">
-                            <label for="concept" class="col-sm-3 control-label">Nome da Estudante</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="concept" name="concept">
+                    <div class="col-sm-12" style="margin-top: 3%; margin-bottom: 3%">
+                        <legend style="text-align: center; font-size: 25px">Cadastro de Empresa</legend>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-body form-horizontal payment-form">
+                            <div class="form-group">
+                                <label for="concept" class="col-sm-3 control-label">Nome da Estudante</label>
+                                <div class="col-sm-9">
+                                    {{ form.nome }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="date" class="col-sm-3 control-label">Data de Nascimento</label>
-                            <div class="col-sm-9">
-                                <input type="date" class="form-control" id="date" name="date">
+                            <div class="form-group">
+                                <label for="date" class="col-sm-3 control-label">Data de Nascimento</label>
+                                <div class="col-sm-9">
+                                    {{ form.data_nascimento }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">CPF</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="description" name="description">
+                            <div class="form-group">
+                                <label for="description" class="col-sm-3 control-label">CEP</label>
+                                <div class="col-sm-9">
+                                    {{ form.cep }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">CEP</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="description" name="description">
+                            <div class="form-group">
+                                <label for="amount" class="col-sm-3 control-label">Cidade</label>
+                                <div class="col-sm-9">
+                                    {{ form.cidade }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="amount" class="col-sm-3 control-label">Endereço</label>
-                            <div class="col-sm-9">
-                                <input type="number" class="form-control" id="amount" name="amount">
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="amount" class="col-sm-3 control-label">Telefone</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control">
+                            <div class="form-group">
+                                <label for="amount" class="col-sm-3 control-label">Endereço</label>
+                                <div class="col-sm-9">
+                                    {{ form.endereco }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">Curso</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="description" name="description">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">Conclusão</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="description" name="description">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">Descrição do currículo</label>
-                            <div class="col-sm-9">
-                            <textarea type="text" rows="3" class="form-control" id="description"
-                                      name="description"></textarea>
-                            </div>
-                        </div>
 
-
-                        <div class="form-group">
-                            <label for="status" class="col-sm-3 control-label">Nome de usuário</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control">
+                            <div class="form-group">
+                                <label for="amount" class="col-sm-3 control-label">Telefone</label>
+                                <div class="col-sm-9">
+                                    {{ form.telefone }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="date" class="col-sm-3 control-label">Senha</label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control">
+                            <div class="form-group">
+                                <label for="description" class="col-sm-3 control-label">Curso</label>
+                                <div class="col-sm-9">
+                                    {{ form.curso }}
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="description" class="col-sm-3 control-label">Conclusão</label>
+                                <div class="col-sm-9">
+                                    {{ form.conclusao }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="col-sm-3 control-label">Descrição do currículo</label>
+                                <div class="col-sm-9">{{ form.descricao_curriculo }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="status" class="col-sm-3 control-label">Nome de usuário</label>
+                                <div class="col-sm-9">
+                                    {{ form.nome_usuario }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date" class="col-sm-3 control-label">Senha</label>
+                                <div class="col-sm-9">
+                                    {{ form.senha }}
+                                </div>
+                            </div>
 
-                        <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">
-                            Concluir
-                        </button>
+                            <button type="submit" class="btn btn-primary" style="margin-left: 340px; font-size: 15px ">
+                                Concluir
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
 
-        </div> <!-- / panel preview -->
-    </div>
+        </div>
+
+    </div> <!-- / panel preview -->
+</div>
 </div>
 </body>
 
