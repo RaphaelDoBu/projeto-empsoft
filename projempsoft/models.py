@@ -17,7 +17,6 @@ class Estudante(models.Model):
         return self.nome + ' - ' + self.curso
 
 class Empresa(models.Model):
-    estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE)
     nome = models.CharField(max_length=250)
     endereco = models.CharField(max_length=250)
     cnpj = models.CharField(max_length=250)
